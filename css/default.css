@@ -3,8 +3,9 @@
 :root {
     --color-body: #000000;
     --color-heading: #FFFFFF;
-    --color-base: #8D99AE;
+    --color-base: #404463;
     --color-base2: #2B2D42;
+    --color-base3: #8D99AE;
     --color-brand: #F8F32B;
     --sidebar-width: 240px;
     --font-base: "Inter";
@@ -34,6 +35,47 @@ img {
     width: 100%;
 }
 
+.brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.navbar {
+    background-color: var(--color-base);
+}
+
 .navbar .nav-link {
     font-weight: 500;
     color: var(--color-heading);
@@ -49,15 +91,39 @@ img {
 }
 
 .navbar img {
-    border: 3px solid var(--color-base);
+    border: 3px solid var(--color-base3);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
 }
 
 @media (min-width: 992px) {
     .navbar {
         min-height: 100vh;
         width: var(--sidebar-width);
-        background: linear-gradient(rgba(43, 45, 66, 0.6), rgba(43, 45, 66, 0.6)), url(../img/trees-background2-gray.jpg);
+        background: linear-gradient(rgba(43, 45, 66, 0.7), rgba(43, 45, 66, 0.7)), url(../img/trees-background2-gray.jpg);
         background-size: cover;
         background-position: center;
+    }
+
+    .content-wrapper {
+        padding-left: var(--sidebar-width);
     }
 }
