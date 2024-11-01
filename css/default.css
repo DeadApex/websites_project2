@@ -118,7 +118,7 @@ img {
     .navbar {
         min-height: 100vh;
         width: var(--sidebar-width);
-        background: linear-gradient(rgba(43, 45, 66, 0.7), rgba(43, 45, 66, 0.7)), url(../img/trees-background2-gray.jpg);
+        background: linear-gradient(rgba(43, 45, 66, 0.6), rgba(43, 45, 66, 0.6)), url(../img/trees-background2-gray-resized.jpg);
         background-size: cover;
         background-position: center;
     }
